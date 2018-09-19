@@ -1,4 +1,3 @@
-#test6
 import random
 from .exceptions import *
 
