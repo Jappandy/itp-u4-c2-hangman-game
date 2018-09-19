@@ -1,7 +1,7 @@
 import random
 from .exceptions import *
 
-# Complete with your own, just for fun :)
+# Complete with your own, just for fun :-)
 LIST_OF_WORDS = []
 
 
