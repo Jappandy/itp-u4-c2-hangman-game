@@ -1,8 +1,8 @@
-#test1
+#test2
 import random
 from .exceptions import *
 
-# Complete with your own, just for fun :-)
+# Complete with your own, just for fun :)
 LIST_OF_WORDS = []
 
 
@@ -13,15 +13,9 @@ def _get_random_word(list_of_words):
 
 
 def _mask_word(word):
-    masked_letter = ''
-    
     if not word:
         raise InvalidWordException()
-    
-    for letter in word:
-        masked_letter += '*'
-        
-    return masked_letter
+    return '*' * len(word)
 
 
 def _uncover_word(answer_word, masked_word, character):
@@ -38,15 +32,15 @@ def _uncover_word(answer_word, masked_word, character):
     if character.lower() not in answer:
         return masked_word
 
-    temp_word = ''
+    new_word = ''
 
     for answer_char, masked_char in zip(answer, masked_word):
         if character.lower() == answer_char:
-            temp_word += answer_char
+            new_word += answer_char
         else:
-            temp_word += masked_char
+            new_word += masked_char
 
-    return temp_word
+    return new_word
 
 
 def _is_game_won(game):
@@ -103,5 +97,4 @@ def start_new_game(list_of_words=None, number_of_guesses=5):
         'remaining_misses': number_of_guesses,
     }
 
-    return game
-    
+return game
