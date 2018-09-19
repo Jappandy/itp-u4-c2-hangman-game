@@ -1,4 +1,4 @@
-#test4
+#test5
 import random
 from .exceptions import *
 
@@ -98,3 +98,4 @@ def start_new_game(list_of_words=None, number_of_guesses=5):
     }
 
     return game
+    
